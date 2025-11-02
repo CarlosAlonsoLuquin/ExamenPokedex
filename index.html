@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="Assets/Style/main.css">
+</head>
+<body>
+    <body>
+    <div class="container">
+        <h1>🎮 Pokédex Trainer Hub</h1>
+        
+        
+        <section id="registro-section" class="card">
+            <h2>📝 Registro de Entrenador</h2>
+            <form id="trainer-form">
+                <div class="form-group">
+                    <label for="trainer-name">Nombre de Entrenador:</label>
+                    <input type="text" id="trainer-name" required>
+                    <span class="error-message" id="error-name"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="trainer-email">Email:</label>
+                    <input type="email" id="trainer-email" required>
+                    <span class="error-message" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="trainer-date">Fecha de Inicio de Aventura:</label>
+                    <input type="date" id="trainer-date" required>
+                    <span class="error-message" id="error-date"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrar Entrenador</button>
+            </form>
+        </section>
+
+        <section id="busqueda-section" class="card hidden">
+            <div class="section-header">
+                <h2>🔍 Buscar y Capturar Pokémon</h2>
+                <button id="btn-logout" class="btn btn-logout">🚪 Cerrar Sesión</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="pokemon-search" placeholder="Escribe el nombre del Pokémon...">
+                <button id="btn-buscar" class="btn btn-search">Buscar</button>
+            </div>
+            
+            
+            <div id="search-error" class="error-message hidden"></div>
+            
+            
+            <div id="pokemon-preview" class="pokemon-preview hidden">
+                <img id="preview-sprite" src="" alt="Pokemon">
+                <h3 id="preview-name"></h3>
+                <button id="btn-add-team" class="btn btn-success">Añadir al Equipo</button>
+            </div>
+        </section>
+
+
+        <section id="equipo-section" class="card hidden">
+            <h2>⚡ Mi Equipo Pokémon</h2>
+            <div id="trainer-info"></div>
+            <ul id="equipo-list"></ul>
+        </section>
+    </div>
+
+    <script src="Assets/JS/main.js"></script>
+</body>
+</html>

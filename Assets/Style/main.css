@@ -1,0 +1,283 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Validación visual de inputs */
+.form-group input.valid {
+    border-color: #4caf50;
+}
+
+.form-group input.invalid {
+    border-color: #f44336;
+}
+
+
+.error-message {
+    display: block;
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+/* Botones */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+    width: 100%;
+}
+
+.btn-search {
+    background: #764ba2;
+    color: white;
+}
+
+.btn-success {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-danger {
+    background: #f44336;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-header h2 {
+    margin-bottom: 0;
+}
+
+.btn-logout {
+    background: #ff5252;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+    background: #d32f2f;
+}
+
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#pokemon-search {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+
+.pokemon-preview {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.pokemon-preview img {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon-preview h3 {
+    margin: 15px 0;
+    color: #333;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+#equipo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pokemon-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.pokemon-item:hover {
+    transform: scale(1.02);
+}
+
+.pokemon-item.favorito {
+    border-color: #ffd700;
+    background: #fffacd;
+}
+
+.pokemon-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pokemon-info img {
+    width: 80px;
+    height: 80px;
+}
+
+.pokemon-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.pokemon-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.favorite-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.favorite-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#trainer-info {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+}
+
+#trainer-info h3 {
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+#trainer-info p {
+    color: #555;
+    margin: 5px 0;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .pokemon-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .pokemon-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
