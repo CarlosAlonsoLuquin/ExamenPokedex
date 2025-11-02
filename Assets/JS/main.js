@@ -190,20 +190,24 @@ function mostrarVistaPrevia(pokemon) {
 btnAddTeam.addEventListener('click', () => {
     if (!pokemonEncontrado) return;
 
-   
+    
     const yaExiste = trainerData.equipo.some(p => p.id === pokemonEncontrado.id);
     
     if (yaExiste) {
         alert('¡Este Pokémon ya está en tu equipo!');
         return;
     }
-o
+
+    
+    const nombrePokemon = pokemonEncontrado.nombre;
+
+    
     trainerData.equipo.push({
         ...pokemonEncontrado,
         favorito: false
     });
 
-   
+    
     localStorage.setItem('trainer', JSON.stringify(trainerData));
 
    
@@ -215,7 +219,7 @@ o
     pokemonPreview.classList.add('hidden');
     pokemonEncontrado = null;
 
-    alert(`¡${pokemonEncontrado?.nombre || 'Pokémon'} ha sido añadido a tu equipo!`);
+    alert(`¡${nombrePokemon} ha sido añadido a tu equipo!`);
 });
 
 function renderizarEquipo() {
